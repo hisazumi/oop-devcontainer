@@ -1,0 +1,30 @@
+{
+  "name": "Java & GUI Codespace Environment",
+  
+  "image": "mcr.microsoft.com/devcontainers/java:25", 
+
+  "features": {
+    "ghcr.io/devcontainers/features/vnc:1": {
+      "desktopEnvironments": "xfce" 
+    },
+    "ghcr.io/devcontainers/features/java:1": {
+      "installMaven": "true",
+      "version": "latest"
+    }
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack"
+      ]
+    }
+  },
+
+  "portsAttributes": {
+    "5901": {
+      "label": "GUI virtual desktop",
+      "onAutoForward": "notify"
+    }
+  }
+}
