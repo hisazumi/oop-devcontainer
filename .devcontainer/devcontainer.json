@@ -4,9 +4,7 @@
   "image": "mcr.microsoft.com/devcontainers/java:25", 
 
   "features": {
-    "ghcr.io/devcontainers/features/vnc:1": {
-      "desktopEnvironments": "xfce" 
-    },
+    "ghcr.io/devcontainers/features/desktop-lite:1": {},
     "ghcr.io/devcontainers/features/java:1": {
       "installMaven": true,
       "version": "latest"
@@ -22,8 +20,8 @@
   },
 
   "portsAttributes": {
-    "5901": {
-      "label": "GUI virtual desktop",
+    "6080": {
+      "label": "noVNC web client",
       "onAutoForward": "notify"
     }
   }
