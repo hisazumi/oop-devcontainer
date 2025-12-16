@@ -21,10 +21,11 @@
   },
 
   "containerEnv": {
-    "LANG": "ja_JP.UTF-8"
+    "LANG": "ja_JP.UTF-8",
+    "LC_ALL": "ja_JP.UTF-8"
   },
 
-  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y fonts-noto-cjk locales && sudo locale-gen ja_JP.UTF-8 && fc-cache -fv",
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y fonts-noto-cjk locales && echo 'ja_JP.UTF-8 UTF-8' | sudo tee -a /etc/locale.gen && sudo locale-gen ja_JP.UTF-8 && sudo update-locale LANG=ja_JP.UTF-8 LC_ALL=ja_JP.UTF-8 && fc-cache -fv",
 
   "forwardPorts": [6080],
 
